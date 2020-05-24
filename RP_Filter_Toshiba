@@ -41,5 +41,6 @@ while True:
             
     if year < 2010:
         pyautogui.click(113, 411)
+        pyautogui.click(429, 142)
         
     sleep(10)
