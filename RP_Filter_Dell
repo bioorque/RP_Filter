@@ -1,0 +1,46 @@
+import pyautogui
+import tkinter
+
+from time import sleep
+
+while True:
+
+    pyautogui.click(10, 10)
+    pyautogui.click(378, 458)
+    pyautogui.drag(300, 200, duration=1)
+    
+    pyautogui.hotkey('ctrl', 'c')
+
+    root = tkinter.Tk()
+    root.withdraw()
+    a = root.clipboard_get()
+    
+    b = a.split('\n')
+
+    c = b[1]
+
+    d = c.split('Artist: ')
+    
+    artist = d[1]
+    
+    e = b[3]
+
+    f = e[-4:]
+
+    year = int(f)
+
+    pyautogui.click(1, 1)
+    
+    listofforbidden = ["Loreena McKennitt", "Coldplay", "Pet Shop Boys", "U2", "MGMT"]
+    
+    for forbidden in listofforbidden:
+    
+        if artist == forbidden:
+            pyautogui.click(96, 331)
+            pyautogui.click(377, 96)
+            
+    if year < 1990:
+        pyautogui.click(96, 331)
+        pyautogui.click(377, 96)
+        
+    sleep(10)
