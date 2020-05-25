@@ -31,7 +31,7 @@ while True:
 
     pyautogui.click(1, 1)
     
-    listofforbidden = ["Loreena McKennitt", "Coldplay", "Pet Shop Boys", "U2", "MGMT"]
+    listofforbidden = ["Red Hot Chili Peppers", "Lana Del Rey", "Shpongle", "Bruce Springsteen", "Elton John", "Loreena McKennitt", "Coldplay", "Pet Shop Boys", "U2", "MGMT", "Afro Celt Sound System"]
     
     for forbidden in listofforbidden:
     
@@ -39,7 +39,7 @@ while True:
             pyautogui.click(113, 411)
             pyautogui.click(429, 142)
             
-    if year < 2010:
+    if year < 1970:
         pyautogui.click(113, 411)
         pyautogui.click(429, 142)
         
