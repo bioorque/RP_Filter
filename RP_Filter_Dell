@@ -1,4 +1,13 @@
-import pyautogui
+#origin    pyautogui.click(10, 10)
+    
+#drag    pyautogui.click(378, 458)
+#drag    pyautogui.drag(300, 200, duration=1)
+    
+#skip    pyautogui.click(96, 331)
+
+#clear    pyautogui.click(377, 96)
+        
+
 import tkinter
 
 from time import sleep
@@ -15,6 +24,8 @@ while True:
     root.withdraw()
     a = root.clipboard_get()
     
+    pyautogui.click(377, 96)
+    
     b = a.split('\n')
 
     c = b[1]
@@ -28,19 +39,27 @@ while True:
     f = e[-4:]
 
     year = int(f)
-
-    pyautogui.click(1, 1)
     
-    listofforbidden = ["Red Hot Chili Peppers", "Lana Del Rey", "Shpongle", "Bruce Springsteen", "Elton John", "Loreena McKennitt", "Coldplay", "Pet Shop Boys", "U2", "MGMT", "Afro Celt Sound System"]
+    print(artist)
+    print(year)
     
-    for forbidden in listofforbidden:
+    listofforbidden = ['Loreena McKennitt', 'Coldplay', 'Pet Shop Boys', 'U2', ]
     
-        if artist == forbidden:
-            pyautogui.click(96, 331)
-            pyautogui.click(377, 96)
-            
-    if year < 1990:
+    if any(artist in t for t in listofforbidden):
+        print("To be skipped because in listofforbidden")
+        print("")
         pyautogui.click(96, 331)
-        pyautogui.click(377, 96)
+    
+    listoffavorites = ['Robert Plant', 'Radiohead', 'The Rolling Stones', 'Beck', 'Pearl Jam', 'elbow', 'Spoon', 'The Black Keys', 'Death Cab for Cutie', 'Neil Young', 'The Beatles', 'Pink Floyd', 'The Cure', 'The Decemberists', 'The National', 'The War on Drugs', 'David Bowie', 'Arcade Fire', 'Thievery Corporation', 'Depeche Mode', 'Led Zeppelin', 'Porcupine Tree', 'Morcheeba', 'Arctic Monkeys', 'alt-J', 'Black Rebel Motorcycle Club', 'Eels', 'Future Islands', 'Robert Plant', 'Cake', 'Bonobo', 'The Smashing Pumpkins', 'Bombino', 'Echo & the Bunnymen', 'Massive Attack', 'The Doors', 'Jefferson Airplane', 'Air', 'Of Monsters and Men', 'The Dandy Warhols', 'Ben Harper', 'Jimi Hendrix', 'Hooverphonic', 'Kings of Leon', 'Iron & Wine', 'The Who', 'Doves', 'Queens of the Stone Age', 'A Perfect Circle', 'The New Pornographers', 'Andrew Bird', 'The Smiths', 'José González', 'Built to Spill', 'The Stone Roses', 'Ben Howard', 'Snow Patrol', 'Pixies', 'Kasabian', 'Feist', 'The Clash', 'Shearwater', 'Blur', 'Björk', 'Jack White', 'PJ Harvey', 'Gorillaz', 'Portishead', 'Muse', 'Radical Face', 'Nada Surf', 'UNKLE', 'New Order', 'Oasis', 'Zero 7', 'Audioslave', 'The White Stripes', 'The Replacements', 'Broken Social Scene', 'Tame Impala', 'Fever Ray', 'Luna', 'Editors', 'Garbage', 'Sonic Youth', 'The Breeders', 'Orbital', 'The Jesus and Mary Chain', 'Finn Brothers', 'Lou Reed', 'God Is An Astronaut', 'Pinback', 'Modest Mouse', 'Elliott Smith', 'Trentemøller', 'Iggy Pop', 'Metric', 'DJ Shadow', 'Slowdive', 'Röyksopp', 'The Coral', 'Junip', 'Sufjan Stevens', 'LCD Soundsystem', 'Franz Ferdinand', 'The Postal Service', 'Nirvana', 'Tom McRae', '!!!', 'Placebo', 'Maps', 'Morrissey', 'Interpol', 'Yo La Tengo', 'Guided by Voices', 'Mogwai', 'Yeah Yeah Yeahs', 'Sebadoh', 'Angus & Julia Stone', 'Violent Femmes', 'Soundgarden', 'Joy Division', 'Black Sabbath', 'Weezer', 'Ratatat', 'The Strokes', 'Wire', 'of Montreal', 'Aphex Twin', 'Television', 'Ride', 'Pavement', 'Sunny Day Real Estate', 'The Notwist', 'Beach House', 'The Brian Jonestown Massacre', 'Paul Banks', 'Ladytron', 'The xx', 'Phoenix', 'Kings of Convenience', 'Bloc Party', 'Tricky', 'The Chemical Brothers', 'Cold War Kids', 'Beastie Boys', 'The Velvet Underground', 'Okkervil River', 'Four Tet', 'The Mars Volta', 'Doug Martsch']
+    
+    if any(artist in s for s in listoffavorites):
+        print("Not to be skipped because in listoffavorites")
+        print("")
+    else:
+        if year < 2015:
+            print("To be skipped because not in listoffavorites and too old")
+            print("")
+            pyautogui.click(96, 331)
+            
         
     sleep(10)
