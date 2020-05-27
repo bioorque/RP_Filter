@@ -44,7 +44,7 @@ while True:
     print(artist)
     print(year)
     
-    listofforbidden = ['Loreena McKennitt', 'Coldplay', 'Pet Shop Boys', 'U2', ]
+    listofforbidden = ['Loreena McKennitt', 'Coldplay', 'Pet Shop Boys', 'U2']
     
     if any(artist in t for t in listofforbidden):
         print("To be skipped because in listofforbidden")
