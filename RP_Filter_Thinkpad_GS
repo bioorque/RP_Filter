@@ -1,0 +1,73 @@
+import pandas as pd
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+from pandas.io.json import json_normalize
+
+## Connect to our service account
+scope = ['https://spreadsheets.google.com/feeds']
+credentials = ServiceAccountCredentials.from_json_keyfile_name('./groovy-form-278909-7544af31376f.json', scope)
+gc = gspread.authorize(credentials)
+
+##Get candidate data sheet from Google Drive
+spreadsheet_key = '1NsVZ4Ni5oN24bBA1FIxMvrP64gjb9ZD9iXfAAXGGAtw'
+book = gc.open_by_key(spreadsheet_key)
+worksheet = book.worksheet("listofforbidden")
+listofforbidden = worksheet.get_all_values()
+
+worksheet = book.worksheet("listoffavorites")
+listoffavorites = worksheet.get_all_values()
+
+
+import pyautogui
+import tkinter
+
+from time import sleep
+
+while True:
+
+    pyautogui.click(10, 10)
+    pyautogui.click(434, 556)
+    pyautogui.drag(438, 240, duration=1)
+    
+    pyautogui.hotkey('ctrl', 'c')
+
+    root = tkinter.Tk()
+    root.withdraw()
+    a = root.clipboard_get()
+    
+    pyautogui.click(429, 142)
+    
+    b = a.split('\n')
+
+    c = b[1]
+
+    d = c.split('Artist: ')
+    
+    artist = d[1]
+    
+    e = b[3]
+
+    f = e[-4:]
+
+    year = int(f)
+    
+    print(artist)
+    print(year)
+        
+    if any(artist in t for t in listofforbidden):
+        print("To be skipped because in listofforbidden")
+        print("")
+        pyautogui.click(113, 411)
+    
+  
+    if any(artist in s for s in listoffavorites):
+        print("Not to be skipped because in listoffavorites")
+        print("")
+    else:
+        if year < 2015:
+            print("To be skipped because not in listoffavorites and too old")
+            print("")
+            pyautogui.click(113, 411)
+            
+        
+    sleep(10)
