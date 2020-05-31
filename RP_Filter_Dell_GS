@@ -8,14 +8,7 @@ scope = ['https://spreadsheets.google.com/feeds']
 credentials = ServiceAccountCredentials.from_json_keyfile_name('./groovy-form-278909-7544af31376f.json', scope)
 gc = gspread.authorize(credentials)
 
-##Get candidate data sheet from Google Drive
-spreadsheet_key = '1NsVZ4Ni5oN24bBA1FIxMvrP64gjb9ZD9iXfAAXGGAtw'
-book = gc.open_by_key(spreadsheet_key)
-worksheet = book.worksheet("listofforbidden")
-listofforbidden = worksheet.get_all_values()
 
-worksheet = book.worksheet("listoffavorites")
-listoffavorites = worksheet.get_all_values()
 
 
 import pyautogui
@@ -54,6 +47,14 @@ while True:
     print(artist)
     print(year)
     
+    ##Get candidate data sheet from Google Drive
+    spreadsheet_key = '1NsVZ4Ni5oN24bBA1FIxMvrP64gjb9ZD9iXfAAXGGAtw'
+    book = gc.open_by_key(spreadsheet_key)
+    worksheet = book.worksheet("listofforbidden")
+    listofforbidden = worksheet.get_all_values()
+
+    worksheet = book.worksheet("listoffavorites")
+    listoffavorites = worksheet.get_all_values()
    
     if any(artist in t for t in listofforbidden):
         print("To be skipped because in listofforbidden")
