@@ -81,6 +81,17 @@ while True:
     print(int_upper_year)
     print("")
     
+    manual_skip = worksheet.cell(8, 1).value
+    print("Manual Skip:")
+    print(manual_skip)
+    print("")
+    
+    listofmanualskip = [['yes'], ['Yes'], ['y'], ['Y']]
+    
+    if any(manual_skip in m for m in listofmanualskip):
+        print("To be skipped because of Manual Skip")
+        print("")
+        pyautogui.click(96, 331)  
         
     if any(artist in t for t in listofforbidden):
         print("To be skipped because in listofforbidden")
