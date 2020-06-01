@@ -9,8 +9,6 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name('./groovy-form-27
 gc = gspread.authorize(credentials)
 
 
-
-
 import pyautogui
 import tkinter
 
@@ -44,8 +42,12 @@ while True:
 
     year = int(f)
     
+    print("Artist:")
     print(artist)
+    print("Year:")
     print(year)
+    print("")
+    
     
     ##Get candidate data sheet from Google Drive
     spreadsheet_key = '1NsVZ4Ni5oN24bBA1FIxMvrP64gjb9ZD9iXfAAXGGAtw'
@@ -55,6 +57,21 @@ while True:
 
     worksheet = book.worksheet("listoffavorites")
     listoffavorites = worksheet.get_all_values()
+    
+    worksheet = book.worksheet("year_limit")
+    
+    lower_year = worksheet.cell(2, 1).value
+    int_lower_year = int(lower_year)
+    print("Lower year limit:")
+    print(int_lower_year)
+    print("")
+    
+    upper_year = worksheet.cell(5, 1).value
+    int_upper_year = int(upper_year)
+    print("Upper year limit:")
+    print(int_upper_year)
+    print("")
+    
         
     if any(artist in t for t in listofforbidden):
         print("To be skipped because in listofforbidden")
@@ -66,7 +83,7 @@ while True:
         print("Not to be skipped because in listoffavorites")
         print("")
     else:
-        if year < 2015:
+        if year < int_upper_year or year > int_upper_year:
             print("To be skipped because not in listoffavorites and too old")
             print("")
             pyautogui.click(113, 411)
