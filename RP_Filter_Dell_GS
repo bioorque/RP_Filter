@@ -92,8 +92,8 @@ while True:
         print("Not to be skipped because in listoffavorites")
         print("")
     else:
-        if year < int_upper_year or year > int_upper_year:
-            print("To be skipped because not in listoffavorites and too old")
+        if year < int_lower_year or year > int_upper_year:
+            print("To be skipped because not in listoffavorites and too old or too recent")
             print("")
             pyautogui.click(96, 331)
             
