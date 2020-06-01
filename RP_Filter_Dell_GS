@@ -1,3 +1,12 @@
+#origin    pyautogui.click(10, 10)
+    
+#drag    pyautogui.click(378, 458)
+#drag    pyautogui.drag(300, 200, duration=1)
+    
+#skip    pyautogui.click(96, 331)
+
+#clear    pyautogui.click(377, 96)
+
 import pandas as pd
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -7,8 +16,6 @@ from pandas.io.json import json_normalize
 scope = ['https://spreadsheets.google.com/feeds']
 credentials = ServiceAccountCredentials.from_json_keyfile_name('./groovy-form-278909-7544af31376f.json', scope)
 gc = gspread.authorize(credentials)
-
-
 
 
 import pyautogui
@@ -44,8 +51,12 @@ while True:
 
     year = int(f)
     
+    print("Artist:")
     print(artist)
+    print("Year:")
     print(year)
+    print("")
+    
     
     ##Get candidate data sheet from Google Drive
     spreadsheet_key = '1NsVZ4Ni5oN24bBA1FIxMvrP64gjb9ZD9iXfAAXGGAtw'
@@ -55,18 +66,33 @@ while True:
 
     worksheet = book.worksheet("listoffavorites")
     listoffavorites = worksheet.get_all_values()
-   
+    
+    worksheet = book.worksheet("year_limit")
+    
+    lower_year = worksheet.cell(2, 1).value
+    int_lower_year = int(lower_year)
+    print("Lower year limit:")
+    print(int_lower_year)
+    print("")
+    
+    upper_year = worksheet.cell(5, 1).value
+    int_upper_year = int(upper_year)
+    print("Upper year limit:")
+    print(int_upper_year)
+    print("")
+    
+        
     if any(artist in t for t in listofforbidden):
         print("To be skipped because in listofforbidden")
         print("")
         pyautogui.click(96, 331)
     
-    
+  
     if any(artist in s for s in listoffavorites):
         print("Not to be skipped because in listoffavorites")
         print("")
     else:
-        if year < 2000:
+        if year < int_upper_year or year > int_upper_year:
             print("To be skipped because not in listoffavorites and too old")
             print("")
             pyautogui.click(96, 331)
