@@ -1,3 +1,12 @@
+#origin    pyautogui.click(10, 10)
+    
+#drag    pyautogui.click(434, 556)
+#drag    pyautogui.drag(438, 240, duration=1)
+    
+#skip    pyautogui.click(113, 411)
+
+#clear    pyautogui.click(429, 142)
+
 import pandas as pd
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
