@@ -1,0 +1,44 @@
+#firefox %u
+#python3 /home/dell/Pictures/Python/Start.py %u
+
+import pyautogui
+import tkinter
+
+from time import sleep
+
+sleep(30)
+
+pyautogui.click(37, 330)
+
+sleep(5)
+
+pyautogui.click(261, 741)
+
+sleep(5)
+
+pyautogui.write('jupzter notebook')
+pyautogui.press('enter')
+
+sleep(15)
+
+pyautogui.click(203, 421)
+
+sleep(2)
+
+pyautogui.click(203, 290)
+
+sleep(2)
+
+pyautogui.click(203, 290)
+
+sleep(25)
+
+pyautogui.click(156, 257)
+
+sleep(1)
+
+pyautogui.click(156, 257)
+
+sleep(1)
+
+pyautogui.click(358, 176)
