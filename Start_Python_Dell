@@ -1,3 +1,5 @@
+#xdotool getmouselocation
+
 #firefox %u
 #python3 /home/dell/Pictures/Python/Start.py %u
 
