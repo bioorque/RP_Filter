@@ -1,3 +1,5 @@
+#xdotool getmouselocation
+
 #origin    pyautogui.click(10, 10)
     
 #drag    pyautogui.click(378, 458)
