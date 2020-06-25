@@ -9,7 +9,9 @@
 
 #clear    pyautogui.click(377, 96)
 
-import pandas as pd
+#lock     pyautogui.click(334, 438)
+
+#import pandas as pd
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from pandas.io.json import json_normalize
@@ -28,6 +30,7 @@ from time import sleep
 while True:
 
     pyautogui.click(10, 10)
+    pyautogui.click(1294, 155)
     pyautogui.click(378, 458)
     pyautogui.drag(300, 200, duration=1)
     
@@ -93,7 +96,7 @@ while True:
     if any(manual_skip in m for m in listofmanualskip):
         print("To be skipped because of Manual Skip")
         print("")
-        pyautogui.click(96, 331)  
+        pyautogui.click(96, 331)
         
     if any(artist in t for t in listofforbidden):
         print("To be skipped because in listofforbidden")
@@ -106,9 +109,13 @@ while True:
         print("")
     else:
         if year < int_lower_year or year > int_upper_year:
-            print("To be skipped because not in listoffavorites and too old or too recent")
+            print("To be skipped because not in listoffavorites, and too old or too recent")
             print("")
             pyautogui.click(96, 331)
             
-        
+    print("")
+    print("")
+    
+#    pyautogui.click(334, 438)
+    
     sleep(10)
