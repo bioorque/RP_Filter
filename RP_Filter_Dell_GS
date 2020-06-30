@@ -11,6 +11,8 @@
 
 #lock     pyautogui.click(334, 438)
 
+from datetime import datetime
+
 #import pandas as pd
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -116,6 +118,10 @@ while True:
     print("")
     print("")
     
-#    pyautogui.click(334, 438)
+    now = datetime.now()
+
+    current_time = now.strftime("%H:%M:%S")
+    print("Current Time =", current_time)
+    print("")
     
     sleep(10)
