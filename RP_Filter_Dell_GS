@@ -1,15 +1,3 @@
-#xdotool getmouselocation
-
-#origin    pyautogui.click(10, 10)
-    
-#drag    pyautogui.click(378, 458)
-#drag    pyautogui.drag(300, 200, duration=1)
-    
-#skip    pyautogui.click(96, 331)
-
-#clear    pyautogui.click(377, 96)
-
-#lock     pyautogui.click(334, 438)
 
 from datetime import datetime
 
@@ -34,7 +22,7 @@ while True:
     pyautogui.click(10, 10)
     pyautogui.click(1294, 155)
     pyautogui.click(378, 458)
-    pyautogui.drag(300, 200, duration=1)
+    pyautogui.drag(300, 200,duration=0.2)
     
     pyautogui.hotkey('ctrl', 'c')
 
