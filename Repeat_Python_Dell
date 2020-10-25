@@ -1,0 +1,122 @@
+
+import pyautogui
+import tkinter
+
+from time import sleep
+
+while True:
+
+    #Jupiter Notebook tab
+
+    pyautogui.click(458, 34)
+
+    sleep(0.01)
+
+    #Stop
+
+    pyautogui.click(410, 172)
+
+    sleep(2)
+
+    #Kernel died ok
+
+    pyautogui.click(995, 243)
+
+    sleep(2)
+
+    #Close Jupiter Notebook tab
+
+    pyautogui.click(659, 22)
+
+    sleep(1)
+
+    #Close Jupiter Notebook tab
+
+    pyautogui.click(659, 22)
+
+    sleep(1)
+
+    #Close Jupiter Notebook tab
+
+    pyautogui.click(659, 22)
+
+    sleep(1)
+
+    #Leave Page Jupiter Notebook tab
+
+    pyautogui.click(991, 379)
+
+    sleep(1)
+
+    #RP tab
+
+    pyautogui.click(10, 10)
+
+    sleep(2)
+
+    #RP logo
+
+    pyautogui.click(76, 146)
+
+    sleep(2)
+
+    #RP burger
+
+    pyautogui.click(28, 111)
+
+    sleep(2)
+
+    #RP Player
+
+    pyautogui.click(45, 178)
+
+    sleep(5)
+
+    #Python Tab
+
+    pyautogui.click(244, 29)
+
+    sleep(2)
+
+    #RP_Filter_Dell.ipynb
+
+    pyautogui.click(203, 290)
+
+    sleep(5)
+
+    #Jupiter Notebook tab
+
+    #pyautogui.click(458, 34)
+
+    #sleep(0.1)
+
+    #Stop
+
+    #pyautogui.click(410, 172)
+
+    #sleep(2)
+
+    #Kernel died ok
+
+    #pyautogui.click(995, 243)
+
+    #sleep(1)
+
+    #Side click
+
+    #pyautogui.click(222, 207)
+
+    #sleep(2)
+
+    #Cut
+
+    #pyautogui.click(197, 172)
+
+    #sleep(2)
+
+    #Play
+
+    pyautogui.click(353, 172)
+
+    sleep(350)
+
