@@ -10,7 +10,7 @@ while True:
 
     pyautogui.click(458, 34)
 
-    sleep(0.01)
+    sleep(0.1)
 
     #Stop
 
@@ -32,15 +32,15 @@ while True:
 
     #Close Jupiter Notebook tab
 
-    pyautogui.click(659, 22)
+    #pyautogui.click(659, 22)
 
-    sleep(1)
+    #sleep(1)
 
     #Close Jupiter Notebook tab
 
-    pyautogui.click(659, 22)
+    #pyautogui.click(659, 22)
 
-    sleep(1)
+    #sleep(1)
 
     #Leave Page Jupiter Notebook tab
 
@@ -50,27 +50,27 @@ while True:
 
     #RP tab
 
-    pyautogui.click(10, 10)
+    #pyautogui.click(10, 10)
 
-    sleep(2)
+    #sleep(2)
 
     #RP logo
 
-    pyautogui.click(76, 146)
+    #pyautogui.click(76, 146)
 
-    sleep(2)
+    #sleep(2)
 
     #RP burger
 
-    pyautogui.click(28, 111)
+    #pyautogui.click(28, 111)
 
-    sleep(2)
+    #sleep(2)
 
     #RP Player
 
-    pyautogui.click(45, 178)
+    #pyautogui.click(45, 178)
 
-    sleep(5)
+    #sleep(5)
 
     #Python Tab
 
@@ -82,7 +82,7 @@ while True:
 
     pyautogui.click(203, 290)
 
-    sleep(5)
+    sleep(10)
 
     #Jupiter Notebook tab
 
@@ -104,9 +104,9 @@ while True:
 
     #Side click
 
-    #pyautogui.click(222, 207)
+    pyautogui.click(222, 207)
 
-    #sleep(2)
+    sleep(2)
 
     #Cut
 
@@ -118,5 +118,5 @@ while True:
 
     pyautogui.click(353, 172)
 
-    sleep(350)
+    sleep(170)
 
