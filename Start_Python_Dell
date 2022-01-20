@@ -8,6 +8,12 @@ from time import sleep
 
 sleep(40)
 
+#Close Donation
+
+pyautogui.click(1325, 165)
+
+sleep(2)
+
 #Play
 
 pyautogui.click(37, 330)
@@ -16,21 +22,21 @@ sleep(5)
 
 #Sync
 
-pyautogui.click(233,281)
+#pyautogui.click(233,281)
 
-sleep(2)
+#sleep(2)
 
 #Channnels
 
-pyautogui.click(803,382)
+#pyautogui.click(803,382)
 
-sleep(2)
+#sleep(2)
 
 #Mellow Mix
 
-pyautogui.click(841,432)
+#pyautogui.click(841,432)
 
-sleep(5)
+#sleep(5)
 
 #Terminal
 
