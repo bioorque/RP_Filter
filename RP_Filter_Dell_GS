@@ -1,11 +1,11 @@
 from datetime import datetime
 
-#import pandas as pd
+import pandas as pd
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from pandas.io.json import json_normalize
 
-## Connect to our service account
+#Connect to our service account
 scope = ['https://spreadsheets.google.com/feeds']
 credentials = ServiceAccountCredentials.from_json_keyfile_name('./groovy-form-278909-7544af31376f.json', scope)
 gc = gspread.authorize(credentials)
@@ -18,10 +18,11 @@ from time import sleep
 
 i = 1
 
-while i < 11:
+while i < 45:
 
     pyautogui.click(10, 10)
-    pyautogui.click(1294, 155)
+# Close Donation Tab
+#    pyautogui.click(1294, 155)
     pyautogui.click(378, 458)
     pyautogui.drag(300, 200,duration=0.5)
     
@@ -42,9 +43,14 @@ while i < 11:
     artist = d[1]
     
     e = b[3]
-
-    f = e[-4:]
-
+    ee = e.split('Released: ')
+    eee = ee[1]
+    
+    f = eee[:4]    
+    
+    print(f)
+    print("")
+    
     year = int(f)
     
     print(i)
@@ -123,16 +129,16 @@ while i < 11:
     
 #Jupiter Notebook tab
 
-pyautogui.click(458, 34)
+#pyautogui.click(458, 34)
 
-sleep(2)
+#sleep(2)
 
 #Side click
 
-pyautogui.click(222, 207)
+#pyautogui.click(222, 207)
 
-sleep(2)
+#sleep(2)
 
 #Stop
 
-pyautogui.click(410, 172)
+#pyautogui.click(410, 172)
