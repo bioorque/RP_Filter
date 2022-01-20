@@ -6,71 +6,33 @@ from time import sleep
 
 while True:
 
+    #RP tab
+
+    pyautogui.click(180, 33)
+
+    sleep(0.2)
+
+    #pyautogui.click(102, 84)
+
+    sleep(1)
+
     #Jupiter Notebook tab
 
-    pyautogui.click(458, 34)
+    #pyautogui.click(458, 34)
 
-    sleep(0.1)
+    sleep(0.2)
 
     #Stop
 
-    pyautogui.click(410, 172)
+    #pyautogui.click(410, 172)
+
+    sleep(0.5)
+
+    #Back to RP tab safety
+
+    pyautogui.click(775, 676)
 
     sleep(2)
-
-    #Kernel died ok
-
-    pyautogui.click(995, 243)
-
-    sleep(2)
-
-    #Close Jupiter Notebook tab
-
-    pyautogui.click(659, 22)
-
-    sleep(1)
-
-    #Close Jupiter Notebook tab
-
-    #pyautogui.click(659, 22)
-
-    #sleep(1)
-
-    #Close Jupiter Notebook tab
-
-    #pyautogui.click(659, 22)
-
-    #sleep(1)
-
-    #Leave Page Jupiter Notebook tab
-
-    pyautogui.click(991, 379)
-
-    sleep(1)
-
-    #RP tab
-
-    #pyautogui.click(10, 10)
-
-    #sleep(2)
-
-    #RP logo
-
-    #pyautogui.click(76, 146)
-
-    #sleep(2)
-
-    #RP burger
-
-    #pyautogui.click(28, 111)
-
-    #sleep(2)
-
-    #RP Player
-
-    #pyautogui.click(45, 178)
-
-    #sleep(5)
 
     #Python Tab
 
@@ -78,45 +40,112 @@ while True:
 
     sleep(2)
 
-    #RP_Filter_Dell.ipynb
+    #close Python Tab
 
-    pyautogui.click(203, 290)
-
-    sleep(10)
-
-    #Jupiter Notebook tab
-
-    #pyautogui.click(458, 34)
-
-    #sleep(0.1)
-
-    #Stop
-
-    #pyautogui.click(410, 172)
-
-    #sleep(2)
-
-    #Kernel died ok
-
-    #pyautogui.click(995, 243)
-
-    #sleep(1)
-
-    #Side click
-
-    pyautogui.click(222, 207)
+    pyautogui.click(434, 29)
 
     sleep(2)
 
-    #Cut
+    #close Python Tab
 
-    #pyautogui.click(197, 172)
+    pyautogui.click(434, 29)
 
-    #sleep(2)
+    sleep(2)
+
+    #close Python Tab
+
+    pyautogui.click(434, 29)
+
+    sleep(2)
+
+    #New tab
+
+    pyautogui.click(240, 32)
+
+    sleep(2)
+
+
+    #Jupyter Notebook
+
+    pyautogui.write('l')
+    pyautogui.press('enter')
+
+    sleep(5)
+
+    #Pictures
+
+    pyautogui.click(200, 425)
+
+    sleep(2)
+
+    #Python
+
+    pyautogui.click(190, 300)
+
+    sleep(2)
+
+    #RP_Filter_Dell.ipynb
+
+    pyautogui.click(190, 300)
+
+    sleep(5)
+
+    #Kernel
+
+    pyautogui.click(422, 141)
+
+    sleep(2)
+
+    #Restart and Clear Output
+
+    pyautogui.click(455, 222)
+
+    sleep(2)
+
+    #Restart and Clear All Output
+
+    pyautogui.click(871, 244)
+
+    sleep(10)
 
     #Play
 
-    pyautogui.click(353, 172)
+    pyautogui.click(386, 175)
 
-    sleep(170)
+    sleep(2)
+
+    #Side click 2
+
+    pyautogui.click(380, 210)
+
+    sleep(1)
+
+    #Play 2
+
+    pyautogui.click(380, 170)
+
+    #Side click 3
+
+    pyautogui.click(380, 210)
+
+    sleep(1)
+
+    #Play 3
+
+    pyautogui.click(380, 170)
+
+    sleep(15)
+
+    #Side click 4
+
+    pyautogui.click(380, 210)
+
+    sleep(1)
+
+    #Play 4
+
+    pyautogui.click(380, 170)
+
+    sleep(600)
+
 
