@@ -35,6 +35,13 @@ while i < 45:
     pyautogui.click(377, 96)
     
     b = a.split('\n')
+    
+ #   print(b)
+    
+    s = b[0]
+    ss = s.split('Song: ')
+    
+    song = ss[1]
 
     c = b[1]
 
@@ -60,7 +67,9 @@ while i < 45:
     current_time = now.strftime("%H:%M:%S")
     print("Current Time =", current_time)
     print("")    
-    
+
+    print("Song:")
+    print(song)
     print("Artist:")
     print(artist)
     print("Year:")
@@ -76,6 +85,9 @@ while i < 45:
 
     worksheet = book.worksheet("listoffavorites")
     listoffavorites = worksheet.get_all_values()
+    
+    worksheet = book.worksheet("listofoverheard")
+    listofoverheard = worksheet.get_all_values()
     
     worksheet = book.worksheet("year_limit")
     
@@ -102,12 +114,16 @@ while i < 45:
         print("To be skipped because of Manual Skip")
         print("")
         pyautogui.click(96, 331)
+
+    if any(song in q for q in listofoverheard):
+        print("To be skipped because in listofoverheard")
+        print("")
+        pyautogui.click(96, 331)
         
     if any(artist in t for t in listofforbidden):
         print("To be skipped because in listofforbidden")
         print("")
         pyautogui.click(96, 331)
-    
   
     if any(artist in s for s in listoffavorites):
         print("Not to be skipped because in listoffavorites")
