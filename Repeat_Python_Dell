@@ -147,5 +147,3 @@ while True:
     pyautogui.click(380, 170)
 
     sleep(600)
-
-
